@@ -1,3 +1,5 @@
+from pprint import pprint
+
 import numpy as np
 import pandas as pd
 import pyomo.environ as pyo
@@ -35,7 +37,8 @@ model.transportation_costs = Param(model.cities, model.cities, initialize=costs,
 
 # Variables
 
-model.concerts_played = Var(model.cities, model.dates, initialize=0, bounds=(0, 1), doc="Attended concerts", domain=pyo.Binary)
+model.concerts_played = Var(model.cities, model.dates, initialize=0, bounds=(0, 1), doc="Attended concerts",
+                            domain=pyo.Binary)
 model.flights_taken = Var(model.cities, model.cities, model.dates, initialize=0, bounds=(0, 1), doc="Flights taken",
                           domain=pyo.Binary)
 
@@ -50,7 +53,6 @@ def init_constraint_rule(model, city_A, city_B, date):
 
 # model.init_constraint = Constraint(model.cities, model.cities, model.dates, rule=init_constraint_rule)
 
-# TODO cannot fly and play on the same day
 # TODO cannot have more than x concerts in a single country
 
 def satisfy_non_multitasking(model, day):
@@ -64,45 +66,34 @@ def satisfy_non_teleportation(model):
     current_position_vector = {city: 1 if city == "London" else 0 for city in model.cities}
     total_teleportations_list = []
     for date in model.dates:
-        # the following teleports are basically playing in another city
-        #for city in model.cities:
-        #    print((1 - current_position_vector[city]) * model.concerts_played[city, date])
-        #print(            Expression(
-        #        rule=lambda m:  # total_teleportations +
-        #        sum(
-        #            (1 - current_position_vector[city]) * model.concerts_played[city, date] for city in
-        #            model.cities
-        #        )
-        #    ))
         total_teleportations_list.append(
-            #Expression(
-            #rule=lambda m:  # total_teleportations +
             sum(
                 (1 - current_position_vector[city]) * model.concerts_played[city, date] for city in
                 model.cities
             )
-            #)
         )
         # the following teleports are basically the same as flying from another airport
         # it would lead to living in two cities at the same time, then switching back and forth without having to fly.
+        # FIXME however, at this point this is causing non-linearity. I need to think about this.
         total_teleportations_list.append(
-            #Expression(
-            #    rule=lambda m:  # total_teleportations +
-                sum(
-                    (
-                        (1 - current_position_vector[city_A]) * model.flights_taken[city_A, city_B]
-                        for city_B in model.cities
-                        for city_A in model.cities
-                    )
+            sum(
+                (
+                    (1 - current_position_vector[city_A]) * model.flights_taken[city_A, city_B, date]
+                    for city_B in model.cities
+                    for city_A in model.cities
                 )
-            #)
+            )
         )
         for city_A in model.cities:
-            current_position_vector[city_A] = Expression(
-                expr=current_position_vector[city_A] + sum(
-                    (model.flights_taken[city_B, city_A, date] - model.flights_taken[city_A, city_B, date]) for city_B
-                    in model.cities
-                )
+            # current_position_vector[city_A] = Expression(
+            #    expr=current_position_vector[city_A] + sum(
+            #        (model.flights_taken[city_B, city_A, date] - model.flights_taken[city_A, city_B, date]) for city_B
+            #        in model.cities
+            #    )
+            # )
+            current_position_vector[city_A] = current_position_vector[city_A] + sum(
+                (model.flights_taken[city_B, city_A, date] - model.flights_taken[city_A, city_B, date]) for city_B
+                in model.cities
             )
 
     return sum(total_teleportations_list) == 0
@@ -127,15 +118,20 @@ model.objective = Objective(rule=total_profit, sense=maximize)
 
 def pyomo_postprocess(options=None, instance=None, results=None):
     model.concerts_played.display()
+    return model.concerts_played, model.flights_taken
 
 
 from pyomo.opt import SolverFactory
 import pyomo.environ
 
-# model.concerts_played.pprint()
-opt = SolverFactory("glpk")
+#model.non_teleportation.pprint()
+solver_name = "ipopt"
+opt = SolverFactory(f"{solver_name}", executable=rf'C:\{solver_name}\bin\{solver_name}.exe')
+opt.options['acceptable_tol'] = 1e-8
+
 results = opt.solve(model)
-# sends results to stdout
 results.write()
 print("\nDisplaying Solution\n" + '-' * 60)
-pyomo_postprocess(None, model, results)
+x, y = pyomo_postprocess(None, model, results)
+
+pprint(({key: value(val) for key, val in dict(x).items() if value(val) > 0.8}, {key: value(val) for key, val in dict(y).items() if value(val) > 0.8}))
