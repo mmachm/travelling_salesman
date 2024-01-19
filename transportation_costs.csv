@@ -1,0 +1,12 @@
+,London,Manchester,Birmingham,Copenhagen,Berlin,Munich,Prague,Warsaw,Wroclaw,Budapest,Bucharest
+London,0,,,,,,,,,,
+Manchester,599,0,,,,,,,,,
+Birmingham,620,700,0,,,,,,,,
+Copenhagen,1734,2053,2041,0,,,,,,,
+Berlin,2605,1149,1169,1685,0,,,,,,
+Munich,2225,3193,3062,1839,1732,0,,,,,
+Prague,629,2176,2261,1919,1622,1734,0,,,,
+Warsaw,601,1423,2555,1861,1861,1423,2053,0,,,
+Wroclaw,1688,1304,1622,1732,1732,1304,1149,601,0,,
+Budapest,916,1698,2183,624,624,1698,3193,2605,599,0,
+Bucharest,629,1149,601,492,492,1149,916,1734,601,601,0

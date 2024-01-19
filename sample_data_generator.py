@@ -14,7 +14,7 @@ cities = {
     "Warsaw": "Poland",
     "Wroclaw": "Poland",
     "Budapest": "Hungary",
-    "Bucharest": "Romania"
+    "Bucharest": "Romania",
 }
 
 def get_random_profit():
