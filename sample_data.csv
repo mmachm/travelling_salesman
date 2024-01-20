@@ -1,0 +1,167 @@
+,date,city,profit,country
+0,1-01-2024,London,1000,United Kingdom
+1,2-01-2024,London,1200,United Kingdom
+2,3-01-2024,London,1200,United Kingdom
+3,7-01-2024,London,1300,United Kingdom
+4,8-01-2024,London,900,United Kingdom
+5,10-01-2024,London,1400,United Kingdom
+6,12-01-2024,London,1400,United Kingdom
+7,15-01-2024,London,700,United Kingdom
+8,18-01-2024,London,500,United Kingdom
+9,19-01-2024,London,700,United Kingdom
+10,21-01-2024,London,1300,United Kingdom
+11,22-01-2024,London,1000,United Kingdom
+12,23-01-2024,London,800,United Kingdom
+13,24-01-2024,London,500,United Kingdom
+14,25-01-2024,London,1900,United Kingdom
+15,26-01-2024,London,1100,United Kingdom
+16,27-01-2024,London,1100,United Kingdom
+17,30-01-2024,London,500,United Kingdom
+18,1-01-2024,Manchester,2500,United Kingdom
+19,2-01-2024,Manchester,1500,United Kingdom
+20,3-01-2024,Manchester,2500,United Kingdom
+21,4-01-2024,Manchester,600,United Kingdom
+22,7-01-2024,Manchester,2500,United Kingdom
+23,10-01-2024,Manchester,1200,United Kingdom
+24,11-01-2024,Manchester,600,United Kingdom
+25,12-01-2024,Manchester,700,United Kingdom
+26,17-01-2024,Manchester,1300,United Kingdom
+27,19-01-2024,Manchester,2800,United Kingdom
+28,20-01-2024,Manchester,2300,United Kingdom
+29,21-01-2024,Manchester,1100,United Kingdom
+30,24-01-2024,Manchester,1100,United Kingdom
+31,25-01-2024,Manchester,1100,United Kingdom
+32,26-01-2024,Manchester,1400,United Kingdom
+33,28-01-2024,Manchester,800,United Kingdom
+34,30-01-2024,Manchester,1100,United Kingdom
+35,31-01-2024,Manchester,1000,United Kingdom
+36,4-01-2024,Birmingham,900,United Kingdom
+37,5-01-2024,Birmingham,700,United Kingdom
+38,6-01-2024,Birmingham,3400,United Kingdom
+39,10-01-2024,Birmingham,1400,United Kingdom
+40,11-01-2024,Birmingham,1800,United Kingdom
+41,17-01-2024,Birmingham,2700,United Kingdom
+42,19-01-2024,Birmingham,2400,United Kingdom
+43,22-01-2024,Birmingham,800,United Kingdom
+44,25-01-2024,Birmingham,500,United Kingdom
+45,28-01-2024,Birmingham,1200,United Kingdom
+46,31-01-2024,Birmingham,1300,United Kingdom
+47,2-01-2024,Copenhagen,1100,Denmark
+48,3-01-2024,Copenhagen,1300,Denmark
+49,4-01-2024,Copenhagen,1300,Denmark
+50,5-01-2024,Copenhagen,1500,Denmark
+51,6-01-2024,Copenhagen,1200,Denmark
+52,11-01-2024,Copenhagen,500,Denmark
+53,12-01-2024,Copenhagen,1000,Denmark
+54,13-01-2024,Copenhagen,500,Denmark
+55,14-01-2024,Copenhagen,500,Denmark
+56,15-01-2024,Copenhagen,1300,Denmark
+57,16-01-2024,Copenhagen,800,Denmark
+58,17-01-2024,Copenhagen,1300,Denmark
+59,20-01-2024,Copenhagen,3300,Denmark
+60,21-01-2024,Copenhagen,1400,Denmark
+61,22-01-2024,Copenhagen,1400,Denmark
+62,26-01-2024,Copenhagen,1000,Denmark
+63,28-01-2024,Copenhagen,600,Denmark
+64,3-01-2024,Berlin,1000,Germany
+65,5-01-2024,Berlin,900,Germany
+66,6-01-2024,Berlin,600,Germany
+67,7-01-2024,Berlin,800,Germany
+68,9-01-2024,Berlin,600,Germany
+69,12-01-2024,Berlin,1100,Germany
+70,13-01-2024,Berlin,500,Germany
+71,16-01-2024,Berlin,500,Germany
+72,17-01-2024,Berlin,1700,Germany
+73,18-01-2024,Berlin,2200,Germany
+74,22-01-2024,Berlin,1500,Germany
+75,23-01-2024,Berlin,1400,Germany
+76,29-01-2024,Berlin,600,Germany
+77,1-01-2024,Munich,900,Germany
+78,2-01-2024,Munich,1200,Germany
+79,5-01-2024,Munich,600,Germany
+80,7-01-2024,Munich,600,Germany
+81,10-01-2024,Munich,700,Germany
+82,11-01-2024,Munich,1100,Germany
+83,13-01-2024,Munich,2700,Germany
+84,17-01-2024,Munich,1000,Germany
+85,18-01-2024,Munich,2000,Germany
+86,20-01-2024,Munich,3100,Germany
+87,21-01-2024,Munich,1300,Germany
+88,23-01-2024,Munich,600,Germany
+89,24-01-2024,Munich,900,Germany
+90,28-01-2024,Munich,900,Germany
+91,30-01-2024,Munich,1700,Germany
+92,31-01-2024,Munich,1400,Germany
+93,3-01-2024,Prague,600,Czech Republic
+94,4-01-2024,Prague,1100,Czech Republic
+95,5-01-2024,Prague,800,Czech Republic
+96,8-01-2024,Prague,700,Czech Republic
+97,9-01-2024,Prague,600,Czech Republic
+98,11-01-2024,Prague,800,Czech Republic
+99,12-01-2024,Prague,1900,Czech Republic
+100,13-01-2024,Prague,600,Czech Republic
+101,14-01-2024,Prague,1300,Czech Republic
+102,15-01-2024,Prague,600,Czech Republic
+103,18-01-2024,Prague,1500,Czech Republic
+104,19-01-2024,Prague,900,Czech Republic
+105,21-01-2024,Prague,2000,Czech Republic
+106,24-01-2024,Prague,1300,Czech Republic
+107,29-01-2024,Prague,1000,Czech Republic
+108,30-01-2024,Prague,1300,Czech Republic
+109,31-01-2024,Prague,600,Czech Republic
+110,1-01-2024,Warsaw,900,Poland
+111,2-01-2024,Warsaw,500,Poland
+112,11-01-2024,Warsaw,900,Poland
+113,15-01-2024,Warsaw,700,Poland
+114,17-01-2024,Warsaw,2400,Poland
+115,21-01-2024,Warsaw,700,Poland
+116,22-01-2024,Warsaw,800,Poland
+117,23-01-2024,Warsaw,2700,Poland
+118,27-01-2024,Warsaw,1100,Poland
+119,28-01-2024,Warsaw,1300,Poland
+120,29-01-2024,Warsaw,600,Poland
+121,1-01-2024,Wroclaw,1700,Poland
+122,4-01-2024,Wroclaw,500,Poland
+123,7-01-2024,Wroclaw,1500,Poland
+124,8-01-2024,Wroclaw,1500,Poland
+125,9-01-2024,Wroclaw,700,Poland
+126,10-01-2024,Wroclaw,700,Poland
+127,14-01-2024,Wroclaw,2200,Poland
+128,16-01-2024,Wroclaw,600,Poland
+129,17-01-2024,Wroclaw,2200,Poland
+130,19-01-2024,Wroclaw,3300,Poland
+131,20-01-2024,Wroclaw,700,Poland
+132,24-01-2024,Wroclaw,2200,Poland
+133,28-01-2024,Wroclaw,1200,Poland
+134,29-01-2024,Wroclaw,1100,Poland
+135,1-01-2024,Budapest,500,Hungary
+136,3-01-2024,Budapest,1100,Hungary
+137,7-01-2024,Budapest,700,Hungary
+138,8-01-2024,Budapest,1000,Hungary
+139,9-01-2024,Budapest,1400,Hungary
+140,10-01-2024,Budapest,500,Hungary
+141,12-01-2024,Budapest,1300,Hungary
+142,15-01-2024,Budapest,600,Hungary
+143,16-01-2024,Budapest,1400,Hungary
+144,17-01-2024,Budapest,1200,Hungary
+145,18-01-2024,Budapest,800,Hungary
+146,20-01-2024,Budapest,900,Hungary
+147,21-01-2024,Budapest,900,Hungary
+148,22-01-2024,Budapest,2800,Hungary
+149,30-01-2024,Budapest,900,Hungary
+150,1-01-2024,Bucharest,600,Romania
+151,3-01-2024,Bucharest,1900,Romania
+152,7-01-2024,Bucharest,500,Romania
+153,10-01-2024,Bucharest,1000,Romania
+154,11-01-2024,Bucharest,600,Romania
+155,12-01-2024,Bucharest,1000,Romania
+156,13-01-2024,Bucharest,1100,Romania
+157,15-01-2024,Bucharest,1000,Romania
+158,18-01-2024,Bucharest,1000,Romania
+159,20-01-2024,Bucharest,700,Romania
+160,21-01-2024,Bucharest,1200,Romania
+161,22-01-2024,Bucharest,700,Romania
+162,27-01-2024,Bucharest,1400,Romania
+163,28-01-2024,Bucharest,1400,Romania
+164,29-01-2024,Bucharest,1200,Romania
+165,31-01-2024,Bucharest,3000,Romania
